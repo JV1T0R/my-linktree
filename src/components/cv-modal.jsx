@@ -15,7 +15,7 @@ function CvModal({ show, onHide }) {
             <Modal.Body>
                 <p>
                     Obrigado pelo interesse! Por favor, note que o uso dos meus dados pessoais são destinados exclusivamente a
-                    oportunidades profissionais apenas.
+                    oportunidades profissionais.
                 </p>
                 <a href={cvPdf}
                     target='_blank' rel='noopener noreferrer'
