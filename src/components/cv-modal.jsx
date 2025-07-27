@@ -1,20 +1,24 @@
 import { Modal } from 'react-bootstrap'
-import { Download } from 'react-bootstrap-icons'
+import { Download, ExclamationTriangleFill } from 'react-bootstrap-icons'
+import cvPdf from '/src/assets/documents/cv-pt.pdf'
 import '/src/styles/component-styles/cv-modal.scss'
 
 function CvModal({ show, onHide }) {
     return (
         <Modal show={show} onHide={onHide} top>
             <Modal.Header closeButton>
-                <Modal.Title>Aviso</Modal.Title>
+                <Modal.Title className='d-flex align-items-center gap-2'>
+                    <ExclamationTriangleFill/>
+                    Aviso
+                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <p>
-                    Obrigado pelo interesse! Por favor, note que meus dados pessoais são destinados exclusivamente a
-                    oportunidades profissionais.
+                    Obrigado pelo interesse! Por favor, note que o uso dos meus dados pessoais são destinados exclusivamente a
+                    oportunidades profissionais apenas.
                 </p>
-                <a href="/src/assets/documents/cv-pt.pdf" 
-                    target="_blank" rel="noopener noreferrer"
+                <a href={cvPdf}
+                    target='_blank' rel='noopener noreferrer'
                     className='btn position-relative p-2 w-100'
                 >
                     <Download className='icon position-absolute fw-bold'/>
