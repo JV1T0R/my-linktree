@@ -1,0 +1,62 @@
+/* Media Queries */
+@use '../mixins.scss' as mixins;
+
+/* Variables (Fonts and Colors) */
+@use '../variables.scss' as variables;
+
+.card-custom {
+    background: transparent;
+    width: 25rem;
+
+    @include mixins.mobile-md {
+        width: 22rem;
+    }
+
+    @include mixins.mobile-sm {
+        width: 19rem;
+    }
+
+    .card-header {
+        h1 {
+            color: variables.$standard-white;
+            font-family: variables.$font-family-primary;
+            font-size: 4rem;
+
+            span {
+                color: variables.$custom-green;
+            }
+
+            @include mixins.mobile-md {
+                font-size: 3.8rem;
+            }
+
+            @include mixins.mobile-sm {
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    .card-body {
+        .btn {
+            background: variables.$standard-white;
+            color: variables.$custom-black;
+            font-family: variables.$font-family-secondary;
+            padding: 0.5rem 1rem;
+            padding-left: 3rem;
+            transition: 0.2s ease-in-out;
+
+            .icon {
+                top: 50%;
+                left: 1rem;
+                transform: translateY(-50%);
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: variables.$custom-green;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

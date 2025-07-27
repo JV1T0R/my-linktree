@@ -1,0 +1,26 @@
+/* Variables (Fonts and Colors) */
+@use '../variables.scss' as variables;
+
+.modal {
+    .btn {
+        background: variables.$custom-green;
+        color: variables.$custom-black;
+        font-family: variables.$font-family-secondary;
+        padding: 0.5rem 1rem;
+        padding-left: 3rem;
+        transition: 0.2s ease-in-out;
+
+        .icon {
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: variables.$standard-white;
+            border: 1px solid variables.$custom-green;
+        }
+    }
+}

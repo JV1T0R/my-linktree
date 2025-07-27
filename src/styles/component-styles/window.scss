@@ -1,0 +1,52 @@
+/* Variables (Fonts and Colors) */
+@use '../variables.scss' as variables;
+
+.window {
+    box-shadow: variables.$custom-shadow;
+
+    .window-header {
+        background-color: #2b2b2b;
+        color: variables.$standard-white;
+
+        .btn-window-custom {
+            border-radius: 0;
+            background-color: transparent;
+
+            .icon {
+                color: variables.$standard-white;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .btn-close-custom {
+            border-top-right-radius: 0.5rem;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: transparent;
+
+            .icon {
+                color: variables.$standard-white;
+            }
+
+            &:hover {
+                background-color: #e81123;
+            }
+        }
+
+        .window-title {
+            background: variables.$custom-black;
+
+            p {
+                font-family: variables.$font-family-primary;
+            }
+        }
+    }
+
+    .window-body {
+        background: variables.$custom-black;
+    }
+}
